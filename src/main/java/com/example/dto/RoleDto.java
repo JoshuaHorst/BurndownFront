@@ -2,6 +2,8 @@ package com.example.dto;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class RoleDto implements Serializable{
 	
 	
@@ -16,16 +18,21 @@ public class RoleDto implements Serializable{
 		this.roleName = roleName;
 		this.permissions = permissions;
 	}
+	
+	public RoleDto() {
+		super();
+	}
+
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getName() {
+	public String getroleName() {
 		return roleName;
 	}
-	public void setName(String name) {
+	public void setroleName(String name) {
 		roleName = name;
 	}
 	public String getPermissions() {
